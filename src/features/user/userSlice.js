@@ -1,17 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
 
-const themes = {
-  winter: "winter",
-  dracula: "dracula",
-};
+const defaultTheme = "winter";
 
 const getUserFromLocalStorage = () => {
   return JSON.parse(localStorage.getItem("user")) || null;
 };
 
 const getThemeFromLocalStorage = () => {
-  const theme = localStorage.getItem("theme") || themes.winter;
+  const theme = localStorage.getItem("theme") || defaultTheme;
   document.documentElement.setAttribute("data-theme", theme);
   return theme;
 };
@@ -36,8 +33,8 @@ const userSlice = createSlice({
       toast.success("Logged out successfully");
     },
     toggleTheme: (state) => {
-      const { dracula, winter } = themes;
-      state.theme = state.theme === dracula ? winter : dracula;
+      // Toggle theme functionality is removed as there is only one default theme now.
+      state.theme = defaultTheme;
       document.documentElement.setAttribute("data-theme", state.theme);
       localStorage.setItem("theme", state.theme);
     },

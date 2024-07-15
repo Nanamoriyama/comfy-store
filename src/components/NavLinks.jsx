@@ -19,7 +19,12 @@ const NavLinks = () => {
         if ((url === "checkout" || url === "orders") && !user) return null;
         return (
           <li key={id}>
-            <NavLink className="capitalize" to={url}>
+            <NavLink
+              className={({ isActive }) =>
+                `capitalize ${isActive ? "border-b-2 border-black" : ""}`
+              }
+              to={url}
+            >
               {text}
             </NavLink>
           </li>

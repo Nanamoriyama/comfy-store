@@ -63,7 +63,7 @@ const ComplexPaginationContainer = () => {
   if (pageCount < 2) return null;
 
   return (
-    <div className="mt-16 flex justify-end">
+    <div className="mt-16 flex justify-center items-center">
       <div className="join">
         <button
           className="btn btn-xs sm:btn-md join-item"

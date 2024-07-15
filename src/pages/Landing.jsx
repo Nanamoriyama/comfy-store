@@ -19,6 +19,7 @@ const Landing = () => {
   return (
     <>
       <Hero />
+
       <FeaturedProducts />
     </>
   );

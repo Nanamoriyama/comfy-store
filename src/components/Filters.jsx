@@ -3,12 +3,13 @@ import FormInput from "./FormInput";
 import FormSelect from "./FormSelect";
 import FormRange from "./FormRange";
 import FormCheckbox from "./FormCheckbox";
+
 const Filters = () => {
   const { meta, params } = useLoaderData();
   const { search, company, category, shipping, order, price } = params;
 
   return (
-    <Form className="bg-base-200 rounded-md px-8 py-4 grid gap-x-4  gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center">
+    <Form className="bg-base-200 rounded-md px-8 py-2 grid gap-x-2 gap-y-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center">
       {/* SEARCH */}
       <FormInput
         type="search"
@@ -56,13 +57,20 @@ const Filters = () => {
         defaultValue={shipping}
       />
       {/* BUTTONS */}
-      <button type="submit" className="btn btn-primary btn-sm">
+      <button
+        type="submit"
+        className="flex justify-center items-center text-center bg-white border border-gray-300 text-black hover:border-black btn-sm"
+      >
         search
       </button>
-      <Link to="/products" className="btn btn-accent btn-sm">
+      <Link
+        to="/products"
+        className="flex justify-center items-center text-center bg-white border border-gray-300 text-black hover:border-black btn-sm"
+      >
         reset
       </Link>
     </Form>
   );
 };
+
 export default Filters;

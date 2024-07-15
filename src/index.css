@@ -2,8 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply font-sans;
+  }
+}
+
 @layer components {
   .align-element {
-    @apply mx-auto max-w-6xl px-8;
+    @apply mx-auto max-w-6xl;
   }
+}
+
+.scrollbar-visible {
+  overflow-x: scroll;
+}
+
+.scrollbar-visible::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+}
+
+.scrollbar-visible::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.scrollbar-visible::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.scrollbar-visible {
+  scrollbar-width: auto; /* Firefox */
+  scrollbar-color: rgba(0, 0, 0, 0.5) rgba(0, 0, 0, 0.1); /* Firefox */
 }

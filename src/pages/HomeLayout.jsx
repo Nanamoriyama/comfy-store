@@ -1,5 +1,6 @@
 import { Outlet, useNavigation } from "react-router-dom";
-import { Header, Navbar, Loading } from "../components";
+import { Header, Navbar, Loading, Footer } from "../components";
+
 const HomeLayout = () => {
   const navigation = useNavigation();
   const isPageLoading = navigation.state === "loading";
@@ -7,6 +8,7 @@ const HomeLayout = () => {
     <>
       <Header />
       <Navbar />
+
       {isPageLoading ? (
         <Loading />
       ) : (
@@ -14,6 +16,7 @@ const HomeLayout = () => {
           <Outlet />
         </section>
       )}
+      <Footer />
     </>
   );
 };

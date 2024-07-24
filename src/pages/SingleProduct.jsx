@@ -52,8 +52,8 @@ const SingleProduct = () => {
   };
 
   return (
-    <section>
-      <div className="text-md breadcrumbs">
+    <section className="m-4">
+      <div className="text-md breadcrumbs mt-0">
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -64,7 +64,7 @@ const SingleProduct = () => {
         </ul>
       </div>
       {/* PRODUCT */}
-      <div className="mt-6 grid gap-y-8 lg:grid-cols-2 lg:gap-x-16">
+      <div className="mt-6 grid gap-y-8 md:grid-cols-2 lg:gap-x-16">
         {/* IMAGE */}
         <img
           src={image}

@@ -8,7 +8,7 @@ const ProductsList = () => {
   const { products } = useLoaderData();
 
   return (
-    <div className="pt-12 space-y-4">
+    <div className="pt-4 space-y-4">
       {products.map((product) => {
         const { title, price, image, rating, reviews, colors } =
           product.attributes;
@@ -21,11 +21,11 @@ const ProductsList = () => {
             to={`/products/${product.id}`}
             className="flex items-center space-x-4 p-1 sm:p-4 border rounded-lg shadow-md hover:shadow-lg transition duration-300"
           >
-            <figure className="flex-shrink-0 w-32 h-32">
+            <figure className="flex-shrink-0 w-32 h-32 ">
               <img
                 src={image}
                 alt={title}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover "
               />
             </figure>
             <div className="flex flex-col flex-grow">
@@ -42,7 +42,7 @@ const ProductsList = () => {
                 {colors.map((color, index) => {
                   const colorMap = {
                     // Define your color mappings here
-                    red: "#FF0000",
+                    white: "#f5f2f2",
                     green: "#00FF00",
                     blue: "#0000FF",
                     yellow: "#FFFF00",

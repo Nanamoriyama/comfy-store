@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row justify-evenly bg-orange-100 p-6 items-center">
         <div className="font-bold text-3xl mb-4 md:mb-0 text-center md:text-left">
           Fancy winning $100 to spend at <br />
-          Confy Store?
+          Comfy Store?
         </div>
         <div className="w-full md:w-auto">
           <div>
